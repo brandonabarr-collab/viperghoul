@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Archive - Retro Terminal</title>
+    <style>
+        body {
+            background-color: #050f05;
+            color: #00ff66;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* CRT Scanline Effect */
+        body::after {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 99999;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        .terminal-container {
+            border: 2px solid #00ff66;
+            padding: 30px;
+            width: 800px;
+            max-width: 100%;
+            box-shadow: 0 0 20px rgba(0, 255, 102, 0.4);
+            background: #0a1a0a;
+        }
+        h1 {
+            text-align: center;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(0, 255, 102, 0.6);
+        }
+        .exhibit-box {
+            border: 1px dashed #00ff66;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .back-btn {
+            display: inline-block;
+            background: #000;
+            color: #00ff66;
+            border: 2px solid #00ff66;
+            padding: 10px 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: inset 0 0 10px rgba(0, 255, 102, 0.2);
+            transition: all 0.2s ease-in-out;
+        }
+        .back-btn:hover {
+            background: #00ff66;
+            color: #000;
+            box-shadow: 0 0 15px #00ff66;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="terminal-container">
+        <h1>[ EXHIBIT 01: THE MUSEUM ]</h1>
+        
+        <div class="exhibit-box">
+            &gt; STATUS: Accessing historical logs...<br>
+            &gt; ARTIFACT INFO: Welcome to the digital exhibition hall. This sector preserves fragments of 80s and 90s aesthetic culture, back-alley lore, and digital memorabilia.<br><br>
+            <em>[Exhibit curation in progress. Check back for upcoming drops and rare items.]</em>
+        </div>
+
+        <a href="index.html" class="back-btn">&lt;&lt; RETURN TO MAIN FOYER</a>
+    </div>
+
+</body>
+</html>
