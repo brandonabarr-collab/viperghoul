@@ -3,117 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIPERGHOUL // ARCADE LOBBY</title>
+    <title>VIPERGHOUL // THE ARCADE FLOOR</title>
     <style>
-        body {
-            background-color: #030803;
-            color: #00ff66;
-            font-family: 'Courier New', Courier, monospace;
+        body, html {
             margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #000;
         }
-        body::after {
-            content: " ";
-            display: block;
-            position: fixed;
-            top: 0; left: 0; bottom: 0; right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-            z-index: 99999;
-            background-size: 100% 2px, 3px 100%;
-            pointer-events: none;
+
+        .arcade-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* This now points directly to the image you just uploaded */
+            background-image: url('arcade.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            image-rendering: pixelated;
         }
-        .arcade-cabinet {
-            border: 4px double #00ff66;
-            padding: 40px;
-            width: 850px;
-            max-width: 100%;
-            box-shadow: 0 0 30px rgba(0, 255, 102, 0.3), inset 0 0 20px rgba(0, 255, 102, 0.15);
-            background: #071207;
-        }
-        h1 {
-            text-align: center;
-            letter-spacing: 5px;
-            margin-bottom: 5px;
-            text-shadow: 0 0 10px rgba(0, 255, 102, 0.8);
-            font-size: 24px;
-        }
-        .subtitle {
-            text-align: center;
-            font-size: 12px;
-            color: #00aa44;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-        }
-        .cabinet-screen {
-            border: 1px solid #00ff66;
-            padding: 20px;
-            margin-bottom: 25px;
-            background: #020802;
-            box-shadow: inset 0 0 10px rgba(0, 255, 102, 0.2);
-        }
-        .sector-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .arcade-btn {
-            display: block;
-            background: #000;
-            color: #00ff66;
-            border: 2px solid #00ff66;
-            padding: 15px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 15px;
-            font-weight: bold;
+
+        .hotspot {
+            position: absolute;
+            background-color: rgba(0, 255, 102, 0.0);
+            border: none;
             cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            box-shadow: inset 0 0 10px rgba(0, 255, 102, 0.2);
-            transition: all 0.2s ease-in-out;
+            transition: background-color 0.2s, box-shadow 0.2s;
+            z-index: 10;
         }
-        .arcade-btn:hover {
-            background: #00ff66;
-            color: #000;
-            box-shadow: 0 0 20px #00ff66;
-            transform: scale(1.02);
+
+        .hotspot:hover {
+            background-color: rgba(0, 255, 102, 0.15);
+            box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
         }
-        .full-width {
-            grid-column: span 2;
-        }
-        .marquee-text {
-            text-align: center;
-            font-size: 13px;
-            color: #ff00ff;
-            text-shadow: 0 0 8px rgba(255, 0, 255, 0.6);
-            margin-top: 25px;
+
+        /* MUSEUM Cabinet (Right-most) */
+        #museum-hotspot {
+            top: 26%;
+            left: 79%;
+            width: 15%;
+            height: 54%;
         }
     </style>
 </head>
 <body>
 
-    <div class="arcade-cabinet">
-        <h1>[ VIPERGHOUL // CENTRAL LOBBY ]</h1>
-        <div class="subtitle">&gt; INSERT TOKEN TO SELECT SECTOR</div>
-        
-        <div class="cabinet-screen">
-            <p>&gt; SYSTEM STATUS: ONLINE</p>
-            <p>&gt; SELECT AN ACTIVE ROOM OR EXHIBIT BELOW:</p>
-            
-            <div class="sector-grid">
-                <a href="museum.html" class="arcade-btn">[ 01. MUSEUM ]</a>
-                <a href="#" class="arcade-btn" style="opacity: 0.5; border-color: #006622; color: #006622; cursor: not-allowed;">[ 02. NEURAL RAIN ]</a>
-                <a href="#" class="arcade-btn full-width" style="opacity: 0.5; border-color: #006622; color: #006622; cursor: not-allowed;">[ 03. BACK ALLEY ARCHIVE (LOCKED) ]</a>
-            </div>
-        </div>
-
-        <div class="marquee-text">
-            *** WELCOME TO THE UNDERGROUND NET. CHOOSE YOUR PATH WISELY. ***
-        </div>
+    <div class="arcade-wrapper">
+        <!-- Hotspot linking to your Museum page -->
+        <a href="museum.html" id="museum-hotspot" class="hotspot" title="MUSEUM"></a>
     </div>
 
 </body>
