@@ -3,85 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViperGhoul // The Archive Hallway</title>
+    <title>ViperGhoul // Museum Grand Lobby</title>
     <style>
         body {
-            background-color: #120b07; /* Deep, rich mahogany/dark brown */
-            color: #d4c5b9; /* Soft aged paper text */
+            background-color: #0d0c0a; /* Deep charcoal stone */
+            color: #d1c7bd;
             font-family: 'Georgia', serif;
             margin: 0;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .nav-back {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #c29b38; /* Muted brass/gold */
-            text-decoration: none;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        .nav-back:hover {
-            color: #f3d482;
-            text-decoration: underline;
-        }
-        header h1 {
-            color: #f3d482;
-            text-shadow: 0 0 8px rgba(243, 212, 130, 0.3);
-            letter-spacing: 2px;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-        header p {
-            color: #8c7b6e;
-            font-style: italic;
-            font-size: 1.05rem;
-            margin-bottom: 40px;
-        }
-        .hallway-container {
+            padding: 0;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            gap: 18px;
-            max-width: 650px;
+            justify-content: space-between;
+        }
+
+        /* Top architectural header / exit back to the arcade */
+        .lobby-exit {
+            padding: 20px 40px;
+            background: rgba(0,0,0,0.5);
+            border-bottom: 1px solid #26221d;
+        }
+        .back-portal {
+            color: #a89f91;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .back-portal:hover {
+            color: #f3d482;
+        }
+
+        /* The central museum lobby experience */
+        .museum-interior {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .lobby-title {
+            color: #f3d482;
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px rgba(243, 212, 130, 0.2);
+        }
+        .lobby-description {
+            color: #8c8275;
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+
+        /* Architectural arches or exhibit wings inside the lobby */
+        .wing-exhibits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 700px;
             margin: 0 auto;
         }
-        .room-door {
-            display: block;
-            background: #1f140e; /* Dark wood panel look */
-            border: 2px solid #3d281a;
-            color: #e6dfd5;
-            padding: 22px;
+        .exhibit-arch {
+            background: #161412;
+            border: 2px solid #2e2821;
+            border-radius: 8px 8px 0 0; /* Arch top feel */
+            padding: 30px 20px;
             text-decoration: none;
-            border-radius: 6px;
-            font-size: 1.15rem;
-            letter-spacing: 1px;
+            color: #e2d9cd;
+            display: block;
             transition: all 0.3s ease;
-            box-shadow: inset 0 0 15px rgba(0,0,0,0.6);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
         }
-        .room-door:hover {
-            background: #2a1c14;
+        .exhibit-arch:hover {
+            background: #201c18;
             border-color: #c29b38;
-            color: #f3d482;
-            box-shadow: 0 0 15px rgba(194, 155, 56, 0.25), inset 0 0 15px rgba(0,0,0,0.6);
-            transform: translateX(5px);
+            box-shadow: 0 0 20px rgba(194, 155, 56, 0.15), inset 0 0 20px rgba(0,0,0,0.8);
+            transform: translateY(-3px);
+        }
+        .arch-number {
+            font-family: 'Courier New', Courier, monospace;
+            color: #c29b38;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .arch-name {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        /* Bottom architectural footer */
+        .lobby-footer {
+            text-align: center;
+            padding: 20px;
+            color: #595248;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+            border-top: 1px solid #1a1714;
         }
     </style>
 </head>
 <body>
 
-    <a href="index.html" class="nav-back">&larr; [ Return to Cyberpunk Arcade Lobby ]</a>
+    <div class="lobby-exit">
+        <a href="index.html" class="back-portal">&larr; [ Step back through the rift into the Cyberpunk Arcade ]</a>
+    </div>
 
-    <header>
-        <h1>THE GRAND ARCHIVE</h1>
-        <p>You have left the neon grid. Choose a threshold to cross.</p>
-    </header>
+    <div class="museum-interior">
+        <h1 class="lobby-title">THE GRAND ARCHIVE</h1>
+        <p class="lobby-description">
+            The neon hum of the arcade fades away. Heavy stone walls surround you, echoing with quiet stillness. Torches flicker along the perimeter, illuminating the entryways to the museum's specialized wings.
+        </p>
 
-    <div class="hallway-container">
-        <a href="room1.html" class="room-door">WING 01: The Corporate Relics Office</a>
-        <a href="room2.html" class="room-door">WING 02: The Electronics Basement</a>
-        <a href="room3.html" class="room-door">WING 03: The Dusty Back Room Vault</a>
-        <a href="room4.html" class="room-door">WING 04: The Frontier Outpost (The Western Wing)</a>
+        <div class="wing-exhibits">
+            <a href="room1.html" class="exhibit-arch">
+                <span class="arch-number">WING I</span>
+                <span class="arch-name">Corporate Casualties</span>
+            </a>
+            <a href="room2.html" class="exhibit-arch">
+                <span class="arch-number">WING II</span>
+                <span class="arch-name">2000s Tech Graveyard</span>
+            </a>
+            <a href="room3.html" class="exhibit-arch">
+                <span class="arch-number">WING III</span>
+                <span class="arch-name">The Lost VHS Vault</span>
+            </a>
+            <a href="room4.html" class="exhibit-arch">
+                <span class="arch-number">WING IV</span>
+                <span class="arch-name">The Frontier Outpost</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="lobby-footer">
+        ViperGhoul Archives // Est. 2026
     </div>
 
 </body>
