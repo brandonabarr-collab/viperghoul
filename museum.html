@@ -3,105 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViperGhoul Museum</title>
+    <title>ViperGhoul // The Archive Hallway</title>
     <style>
         body {
-            background-color: #0d0d0d;
-            color: #e0e0e0;
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #120b07; /* Deep, rich mahogany/dark brown */
+            color: #d4c5b9; /* Soft aged paper text */
+            font-family: 'Georgia', serif;
             margin: 0;
-            padding: 20px;
-        }
-        header {
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            color: #00ffcc;
-            text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
-            letter-spacing: 2px;
         }
         .nav-back {
             display: inline-block;
-            margin-bottom: 20px;
-            color: #ff0055;
+            margin-bottom: 30px;
+            color: #c29b38; /* Muted brass/gold */
             text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-        }
-        .nav-back:hover {
-            text-decoration: underline;
-        }
-        .room-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .room-card {
-            background: #141414;
-            border: 1px solid #262626;
-            border-radius: 4px;
-            padding: 20px;
-            box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
-            transition: border-color 0.3s ease;
-        }
-        .room-card:hover {
-            border-color: #00ffcc;
-        }
-        .room-card h2 {
-            color: #ff0055;
-            margin-top: 0;
-            font-size: 1.2rem;
-            text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .room-card p {
-            color: #999;
-            font-size: 0.95rem;
-            line-height: 1.4;
+        .nav-back:hover {
+            color: #f3d482;
+            text-decoration: underline;
+        }
+        header h1 {
+            color: #f3d482;
+            text-shadow: 0 0 8px rgba(243, 212, 130, 0.3);
+            letter-spacing: 2px;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #8c7b6e;
+            font-style: italic;
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+        }
+        .hallway-container {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .room-door {
+            display: block;
+            background: #1f140e; /* Dark wood panel look */
+            border: 2px solid #3d281a;
+            color: #e6dfd5;
+            padding: 22px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.15rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.6);
+        }
+        .room-door:hover {
+            background: #2a1c14;
+            border-color: #c29b38;
+            color: #f3d482;
+            box-shadow: 0 0 15px rgba(194, 155, 56, 0.25), inset 0 0 15px rgba(0,0,0,0.6);
+            transform: translateX(5px);
         }
     </style>
 </head>
 <body>
 
-    <a href="index.html" class="nav-back">&larr; Return to Arcade Lobby</a>
+    <a href="index.html" class="nav-back">&larr; [ Return to Cyberpunk Arcade Lobby ]</a>
 
     <header>
-        <h1>The ViperGhoul Museum</h1>
-        <p>Archived Artifacts, Relics, and Corporate Casualties</p>
+        <h1>THE GRAND ARCHIVE</h1>
+        <p>You have left the neon grid. Choose a threshold to cross.</p>
     </header>
 
-    <div class="room-grid">
-        <!-- Room 1: Corporate Casualties -->
-        <div class="room-card">
-            <h2>Room 1: Corporate Casualties</h2>
-            <p><strong>Exhibit A:</strong> Obsolete enterprise signage and broken cash registers from the retail graveyard.</p>
-            <p><strong>Exhibit B:</strong> Legally dubious permanent ban correspondence from corporate servers circa 2000.</p>
-        </div>
-
-        <!-- Room 2: 2000s Tech Graveyard -->
-        <div class="room-card">
-            <h2>Room 2: 2000s Tech Graveyard</h2>
-            <p><strong>Exhibit A:</strong> The sacred screech and handshake of a 56k dial-up connection.</p>
-            <p><strong>Exhibit B:</strong> Low-poly CRT displays humming in the dark with tangled nests of beige power cables.</p>
-        </div>
-
-        <!-- Room 3: The Lost VHS Vault -->
-        <div class="room-card">
-            <h2>Room 3: The Lost VHS Vault</h2>
-            <p><strong>Exhibit A:</strong> Floor-to-ceiling metal shelving units packed with unlabeled tape spines.</p>
-            <p><strong>Exhibit B:</strong> Glitchy magnetic tracking static loops and forgotten underground media finds.</p>
-        </div>
-
-        <!-- Room 4: The 3D Artifact Showcase -->
-        <div class="room-card">
-            <h2>Room 4: The 3D Artifact Showcase</h2>
-            <p><strong>Exhibit A:</strong> Spotlighted obsidian pedestals and heavy brass arcade tokens.</p>
-            <p><strong>Exhibit B:</strong> Custom-colored articulated models and independent physical crafts.</p>
-        </div>
+    <div class="hallway-container">
+        <a href="room1.html" class="room-door">WING 01: The Corporate Relics Office</a>
+        <a href="room2.html" class="room-door">WING 02: The Electronics Basement</a>
+        <a href="room3.html" class="room-door">WING 03: The Dusty Back Room Vault</a>
+        <a href="room4.html" class="room-door">WING 04: The Frontier Outpost (The Western Wing)</a>
     </div>
 
 </body>
