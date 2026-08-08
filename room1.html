@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wing 01 // Corporate Relics</title>
+    <style>
+        body {
+            background-color: #0f1412; /* Dim, faded corporate green/slate */
+            color: #b8c4bc;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #c29b38;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .nav-back:hover {
+            color: #f3d482;
+            text-decoration: underline;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #223328;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            color: #e06c75; /* Faded corporate red warning vibe */
+            text-shadow: 0 0 10px rgba(224, 108, 117, 0.3);
+            letter-spacing: 2px;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #7f9185;
+            font-style: italic;
+        }
+        .memorial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .memorial-card {
+            background: #161f1a;
+            border: 1px solid #283d31;
+            border-radius: 4px;
+            padding: 25px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
+            position: relative;
+        }
+        .memorial-card h3 {
+            color: #61afef;
+            margin-top: 0;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            border-bottom: 1px dashed #283d31;
+            padding-bottom: 10px;
+        }
+        .memorial-card .years {
+            font-size: 0.85rem;
+            color: #e5c07b;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .memorial-card p {
+            color: #9daea3;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="museum.html" class="nav-back">&larr; [ Return to the Grand Archive Hallway ]</a>
+
+    <header>
+        <h1>WING 01: THE CORPORATE CASUALTIES</h1>
+        <p>In memoriam of giants that thought they were too big to fail.</p>
+    </header>
+
+    <div class="memorial-grid">
+        <!-- Exhibit 1 -->
+        <div class="memorial-card">
+            <h3>Blockbuster Video</h3>
+            <span class="years">[ 1985 — 2013 ]</span>
+            <p>Once valued at billions, reigning king of late fees and Friday night social destination. Died of a terminal lack of imagination after laughing Netflix out of a meeting room in 2000. Survived only by a single lonely storefront in Bend, Oregon.</p>
+        </div>
+
+        <!-- Exhibit 2 -->
+        <div class="memorial-card">
+            <h3>Circuit City</h3>
+            <span class="years">[ 1949 — 2009 ]</span>
+            <p>Home of the massive rotating red neon sign and wall-to-wall car audio displays. Perished after deciding that laying-off all its experienced commission sales staff to save a buck was a winning masterclass in retail suicide.</p>
+        </div>
+
+        <!-- Exhibit 3 -->
+        <div class="memorial-card">
+            <h3>RadioShack</h3>
+            <span class="years">[ 1921 — 2015 ]</span>
+            <p>You've got questions, they've got blank stares from high school cashiers who had no idea what a resistor was. Remembered fondly for the annual battery club cards and drawers full of mysterious electronic components.</p>
+        </div>
+
+        <!-- Exhibit 4 -->
+        <div class="memorial-card">
+            <h3>Toys "R" Us</h3>
+            <span class="years">[ 1948 — 2018 ]</span>
+            <p>Where every kid went to wander warehouse aisles dreaming of absolute power. Succumbed to a crushing corporate leveraged buyout, proving that even Geoffrey the Giraffe couldn't outrun predatory venture capital math.</p>
+        </div>
+    </div>
+
+</body>
+</html>
