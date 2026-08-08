@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wing 01 // Corporate Relics Room</title>
+    <style>
+        body {
+            background-color: #0b0f0d; /* Deep, shadowed room tone */
+            color: #b8c4bc;
+            font-family: 'Georgia', serif; /* Classic academic font */
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #c29b38;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .nav-back:hover {
+            color: #f3d482;
+            text-decoration: underline;
+        }
+        .room-interior {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 4px double #283d31; /* Heavy physical frame look */
+            background: #141c17; /* Dark mahogany/slate interior */
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.9), inset 0 0 40px rgba(0,0,0,0.6);
+        }
+        .room-header {
+            text-align: center;
+            border-bottom: 1px solid #283d31;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        .room-header h1 {
+            color: #e06c75;
+            letter-spacing: 2px;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .room-header p {
+            color: #7f9185;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        /* Each exhibit looks like a physical plaque or display station */
+        .exhibit-stand {
+            background: #0f1412;
+            border-left: 3px solid #c29b38; /* Brass display plaque accent */
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .exhibit-stand:last-child {
+            margin-bottom: 0;
+        }
+        .exhibit-stand h3 {
+            color: #61afef;
+            margin-top: 0;
+            font-size: 1.15rem;
+            letter-spacing: 1px;
+        }
+        .exhibit-stand .catalog-number {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+            color: #c29b38;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .exhibit-stand p {
+            color: #9daea3;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="max-width: 800px; margin: 0 auto;">
+        <a href="museum.html" class="nav-back">&larr; [ Step Back Out to the Hallway ]</a>
+    </div>
+
+    <div class="room-interior">
+        <div class="room-header">
+            <h1>WING 01: THE CORPORATE CASUALTIES</h1>
+            <p>You step into a quiet, dimly lit room lined with heavy wooden panels. Four archival display cases rest in the stillness.</p>
+        </div>
+
+        <!-- Exhibit 1 -->
+        <div class="exhibit-stand">
+            <span class="catalog-number">Exhibit Case 01-A // File #1985-2013</span>
+            <h3>Blockbuster Video</h3>
+            <p>Once reigning king of Friday night social destinations. Died of a terminal lack of imagination after laughing Netflix out of a meeting room in 2000. Preserved here as a warning against corporate arrogance.</p>
+        </div>
+
+        <!-- Exhibit 2 -->
+        <div class="exhibit-stand">
+            <span class="catalog-number">Exhibit Case 01-B // File #1949-2009</span>
+            <h3>Circuit City</h3>
+            <p>Home of the massive rotating red neon sign and endless walls of car audio. Perished after deciding that laying off all experienced commission sales staff to save a quick buck was a masterclass in retail self-destruction.</p>
+        </div>
+
+        <!-- Exhibit 3 -->
+        <div class="exhibit-stand">
+            <span class="catalog-number">Exhibit Case 01-C // File #1921-2015</span>
+            <h3>RadioShack</h3>
+            <p>You've got questions, they've got blank stares from cashiers who had no idea what a resistor was. Remembered fondly for the annual battery club cards and mystery parts drawers.</p>
+        </div>
+
+        <!-- Exhibit 4 -->
+        <div class="exhibit-stand">
+            <span class="catalog-number">Exhibit Case 01-D // File #1948-2018</span>
+            <h3>Toys "R" Us</h3>
+            <p>Where every kid wandered warehouse aisles dreaming of absolute power. Succumbed to predatory leveraged buyout math, proving even Geoffrey the Giraffe couldn't outrun corporate financial engineering.</p>
+        </div>
+    </div>
+
+</body>
+</html>
